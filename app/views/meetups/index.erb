@@ -1,0 +1,27 @@
+<h1>Meetups</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @meetups.each do |meetup| %>
+    <tr>
+      <td>
+        <a href="/meetups/<%= meetup.id %>">
+          <%= meetup.name %>
+        </a>
+      </td>
+      <td>
+        <%= meetup.location %>
+      </td>
+      <td>
+        <%= meetup.date %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
